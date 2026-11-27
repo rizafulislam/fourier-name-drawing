@@ -8,7 +8,7 @@ Draws a name, in Bangla, English or both, as a chain of rotating circles. Each c
 
 ## Draw your own name
 
-Replace `আপনার নাম` and `YOUR NAME` below with your name. One line or two, Bangla or English, juktoborno included.
+Replace `আপনার নাম` and `YOUR NAME` below with your name. One line or two, Bangla or English.
 
 **In Google Colab (nothing to install).** Click the *Open in Colab* button above. In the second cell, change
 
