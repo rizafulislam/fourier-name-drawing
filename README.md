@@ -6,6 +6,43 @@ Draws a name, in Bangla, English or both, as a chain of rotating circles. Each c
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rizafulislam/fourier-name-drawing/blob/main/notebooks/fourier_name.ipynb)
 
+## Draw your own name
+
+Replace `আপনার নাম` and `YOUR NAME` below with your name. One line or two, Bangla or English, juktoborno included.
+
+**In Google Colab (nothing to install).** Click the *Open in Colab* button above. In the second cell, change
+
+```python
+lines = ["রিজাফুল", "RIZAFUL"]
+```
+
+to `lines = ["আপনার নাম", "YOUR NAME"]`, then choose **Runtime → Run all**. The video downloads when it is done.
+
+**From a downloaded copy (VS Code or any terminal).** Click **Code → Download ZIP** on this page and extract it, or `git clone` the repo. Open the folder in VS Code (**File → Open Folder**), open a terminal (**Terminal → New Terminal**) and run:
+
+```bash
+pip install -r requirements.txt
+python -m fourier_name "আপনার নাম" "YOUR NAME" -o myname.mp4
+```
+
+`myname.mp4` is saved in the same folder. ffmpeg must be installed. On Windows, run `winget install ffmpeg` and then restart the terminal.
+
+To use the ▶ Run button instead, create a file `run.py` in the folder:
+
+```python
+from fourier_name import make_video
+
+make_video(["আপনার নাম", "YOUR NAME"], "myname.mp4")
+```
+
+**As an installed command.** See [Install](#install), then:
+
+```bash
+fourier-name "আপনার নাম" "YOUR NAME" -o myname.mp4
+```
+
+Add `--preview check.png` to see the finished drawing in a few seconds before rendering the video.
+
 ## The idea
 
 Any closed curve in the plane can be written as a complex function $z(t) = x(t) + i\,y(t)$ with period $2\pi$, and so as a Fourier series
