@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fourier-name-drawing"
+version = "1.0.0"
+description = "Draw Bangla and English names with a Fourier series of rotating circles"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Rizaful" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "pillow", "fonttools", "uharfbuzz"]
+
+[project.scripts]
+fourier-name = "fourier_name.cli:main"
+
+[tool.setuptools]
+packages = ["fourier_name"]
